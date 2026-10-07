@@ -1,12 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { OnInit } from '@angular/core';
+import { initFlowbite } from 'flowbite';
+import { NavbarComponent } from './navbar/navbar.component';
+import { ListaAlumnosComponent } from './escuela/lista-alumnos/lista-alumnos.component'
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, NavbarComponent,ListaAlumnosComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
-  title = 'SegundoParcialAngular';
+export class AppComponent implements OnInit {
+  title = 'web-app';
+
+  ngOnInit(): void {
+    initFlowbite();
+  }
 }

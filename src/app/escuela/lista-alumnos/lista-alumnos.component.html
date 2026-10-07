@@ -1,0 +1,118 @@
+<div class="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow">
+
+  <h1 class="text-3xl font-bold text-gray-900 mb-6">
+    Lista alumnos
+  </h1>
+
+  <form [formGroup]="formulario">
+
+    <!-- Nombre -->
+    <div class="mb-5">
+
+      <label
+        for="matricula"
+        class="block mb-2 text-sm font-medium text-gray-900"
+      >
+        Matricula
+      </label>
+
+      <input
+        type="text"
+        id="matricula"
+        name="matricula"
+        formControlName="matricula"
+        required
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+               focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        placeholder="Matricula"
+      >
+
+    <br>
+
+    <label
+        for="nombre"
+        class="block mb-2 text-sm font-medium text-gray-900"
+      >
+        Nombre
+      </label>
+
+      <input
+        type="text"
+        id="nombre"
+        name="nombre"
+        required
+        formControlName="nombre"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+               focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        placeholder="Nombre"
+      >
+
+      <br>
+
+    <label
+        for="correo"
+        class="block mb-2 text-sm font-medium text-gray-900"
+      >
+        Correo
+      </label>
+
+      <input
+        type="text"
+        id="correo"
+        name="correo"
+        required
+        formControlName="correo"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+               focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        placeholder="Correo"
+      >
+
+      <br>
+
+    <label
+        for="materia"
+        class="block mb-2 text-sm font-medium text-gray-900"
+      >
+        Materia
+      </label>
+
+      <input
+        type="text"
+        id="materia"
+        name="materia"
+        required
+        formControlName="materia"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+               focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        placeholder="Materia"
+      >
+
+      <!-- Botón -->
+      <div class="flex justify-end mt-5">
+
+        <button
+          type="submit"
+          (click)="muestraAlumnos()"
+          class="text-white bg-blue-700 hover:bg-blue-800
+                 focus:ring-4 focus:outline-none focus:ring-blue-300
+                 font-medium rounded-lg text-sm px-5 py-2.5
+                 disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          Send
+        </button>
+
+      </div>
+
+    </div>
+
+  </form>
+
+
+
+
+</div>
+
+<h3>Matricula: {{alumno.matricula}}</h3>
+<h3>Nombre: {{alumno.nombre}}</h3>
+<h3>Correo: {{alumno.correo}}</h3>
+<h3>Materia: {{alumno.materia}}</h3>
