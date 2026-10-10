@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common'
 
 import { FormGroup, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IAlumno } from './alumnos';
 
 @Component({
   selector: 'app-lista-alumnos',
-  imports: [FormsModule, ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule, CommonModule],
   templateUrl: './lista-alumnos.component.html',
   styleUrl: './lista-alumnos.component.css'
 })
